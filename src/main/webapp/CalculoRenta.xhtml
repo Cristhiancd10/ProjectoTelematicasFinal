@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+
+
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<title>Calculo Renta</title>
+	<link href="estilos.css" rel="stylesheet" type="text/css"
+		media="screen" />
+</h:head>
+<body>
+	<h:form>
+		<div class="titulo">
+			<h2>Ingresos</h2>
+		</div>
+		<div class="titulo">
+
+			<div class="parte3">
+
+				&nbsp;
+				<h:panelGrid columns="1">
+					
+					<h:commandButton action="#{deducibleController.listarDeducible()}"
+						value="Ingresos" />
+
+					<h:outputLabel value="Ingresos" />
+					<h:outputText value="#{deducibleController.it.totalIngresos}" />
+				</h:panelGrid>
+			</div>
+		</div>
+
+		<div class="titulo">
+			<h2>Detalle de Ingresos</h2>
+		</div>
+
+		<div class="titulo">
+			<div class="parte3">
+
+				<br /> <br /> &nbsp;
+				<h:panelGrid columns="2">
+					<h:outputLabel value="Vivienda" />
+
+					<h:outputText
+						value="#{deducibleController.dt.valorDeducibleVivienda}" />
+
+					<h:outputLabel value="Educacion" />
+					<h:outputText
+						value="#{deducibleController.dt.valorDeducibleEducacion}" />
+
+					<h:outputLabel value="Salud" />
+					<h:outputText value="#{deducibleController.dt.valorDeducibleSalud}" />
+
+					<h:outputLabel value="Vestimenta" />
+					<h:outputText
+						value="#{deducibleController.dt.valorDeducibleVestimenta}" />
+
+					<h:outputLabel value="Alimentacion" />
+					<h:outputText
+						value="#{deducibleController.dt.valorDeducibleAlimentacion}" />
+				</h:panelGrid>
+			</div>
+		</div>
+		<div class="titulo">
+			<h2>Resultados</h2>
+		</div>
+
+		<div class="titulo">
+			<div class="parte3">
+
+				&nbsp;
+				<h:panelGrid columns="2">
+					<h:outputLabel value="Suma Deducibles" />
+					<h:outputText value="#{deducibleController.dt.totalDeducible}" />
+
+					<h:outputLabel value="Resta Ingresos Deducibles" />
+					<h:outputText value="#{deducibleController.res}" />
+
+					<h:outputLabel value="Calcular Impuestos" />
+					<h:outputText value="#{deducibleController.impuesto}" />
+				</h:panelGrid>
+
+			</div>
+		</div>
+		<h:commandButton class="btn3r" action="Modulos"
+			value="" />
+	</h:form>
+
+
+
+
+</body>
+
+</html>

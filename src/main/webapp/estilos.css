@@ -1,0 +1,290 @@
+@charset "ISO-8859-1";
+.ingresar{
+
+    font-size: 30pt;
+    background-color: rgb(19, 31, 85);
+    color: rgb(184, 196, 224);
+    border-radius: 10px;
+    padding: 5%;
+    text-shadow: 1px 1px 2px gold, 0 0 4em white, 0 0 0.4em blue;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.cont {
+	position:absolute;
+	top:5%;
+	left:10%;
+	width: 700px;
+}
+.cont1 {
+	position:absolute;
+	top:5%;
+	left:41%;
+	width: 700px;
+}
+.cont2 {
+	position:absolute;
+	top:5%;
+	left:68%;
+	width: 700px;
+}
+
+body {background:url('img/sri1.png'); 
+	background-repeat: no-repeat;
+	background-position: 150px 50px;
+	height: 100%;
+	width:100%
+}
+
+.f {
+	
+    background-color: rgb(19, 31, 85);
+    color: rgb(184, 196, 224);
+    border-radius: 10px;
+    padding: 1% ;
+    text-shadow: 1px 1px 2px gold, 0 0 4em white, 0 0 0.4em blue;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    position:relative;
+	top:30px;
+	left:30%;
+	height: 350px;
+	width: 600px;
+}
+
+.form{
+	position:absolute;
+	bottom:10%;
+	left:5%;
+    background-color: rgb(174, 214, 241);
+    color: rgb(184, 196, 224);
+    border-radius: 10px;
+    padding: 1% 2%;
+    text-shadow: 1px 1px 2px gold, 0 0 4em white, 0 0 0.4em blue;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    width: 140px;
+    
+}
+.form1{
+	position:absolute;
+	bottom:10%;
+	left:35%;
+    background-color: rgb(174, 214, 241);
+    color: rgb(184, 196, 224);
+    border-radius: 10px;
+    padding: 1% 2%;
+    text-shadow: 1px 1px 2px gold, 0 0 4em white, 0 0 0.4em blue;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    width: 140px;
+    align-content: center;
+    
+}
+.form2{
+	position:absolute;
+	bottom:10%;
+	left:65%;
+    background-color: rgb(174, 214, 241);
+    color: rgb(184, 196, 224);
+    border-radius: 10px;
+    padding: 1% 2%;
+    text-shadow: 1px 1px 2px gold, 0 0 4em white, 0 0 0.4em blue;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    width: 140px;
+}
+
+.etiqueta{
+	font-size: 20px;
+	
+}
+.btn1{
+	padding:3% 25%;
+	font-size:18px;
+	font-family:courier-new;
+	border-radius: 8px;
+}
+.btn2{
+	padding:3% 35%;
+	font-size:18px;
+	font-family:courier-new;
+	border-radius: 8px;
+}
+
+.formulario{
+	position: relative;
+	left:30%;
+}
+.Error{
+	position:relative;
+	left:35%;
+    background-color: rgb(252, 243, 180);
+    font-size:25px;
+    color: rgb(80, 15, 8);
+    border-radius: 10px;
+    padding: 1% 6%;
+    text-shadow: 1px 1px 2px gold, 0 0 4em white, 0 0 0.4em red;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    width:380px;
+}
+.RegresarLogin{
+	position:relative;
+	left:30%;
+	right:5%;
+	padding:2% 10% ;
+	font-size:25px;
+	font-family:courier-new;
+	border-radius: 8px;
+}
+
+.tables{
+	position:fixed; 
+	top:10%; 
+	left:25%; 
+	width:950px; 
+	border-style:double; 
+	padding:2px;
+	font-size:18px;
+	background-color: rgb(19, 31, 85);
+	border-radius: 5px;}
+	
+	.btn3r{
+	position: relative;
+	top:30%;
+	left:5%;
+	background:url('img/reg.png');
+	background-repeat:no-repeat;
+    color: rgb(184, 196, 224);
+    width: 128px;
+    height: 128px;
+    border-style:none;
+	}
+	
+		.btn3m{
+	position: relative;
+	top:10%;
+	left:90%;
+	background:url('img/reg.png');
+	background-repeat:no-repeat;
+    color: rgb(184, 196, 224);
+    width: 128px;
+    height: 128px;
+    border-style:none;
+	}
+	
+	.estilol{
+	font-size: 12pt;  
+    color: rgb(184, 196, 224);
+    border-radius: 10px;
+    padding: 5%;
+    text-shadow: 1px 1px 1px gold, 0 0 4em black, 0 0 0.4em blue;
+	}
+	
+		.estiloC{
+	font-size: 12pt;
+    color: rgb(252, 243, 180);
+    border-radius: 10px;
+    padding: 5%;
+    text-shadow: 1px 1px 1px gold, 0 0 2em black, 0 0 0.4em black;
+	}
+	
+	.btns{
+	position: relative;
+	top:1%;
+	font-size: 13pt;
+    background: rgb(1, 31, 85);
+    color: rgb(184, 196, 224);
+    border-radius: 5px;
+    padding: 1% 2%;
+    text-shadow: 1px 1px 1px black, 0 0 4em black, 0 0 0.4em black;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+	}
+	
+		.btnsG{
+	position: relative;
+	top:5%;
+	left:100%;
+	font-size: 13pt;
+    background: rgb(1, 31, 85);
+    color: rgb(184, 196, 224);
+    border-radius: 5px;
+    padding: 2% 10%;
+    text-shadow: 1px 1px 2px gold, 0 0 4em white, 0 0 0.4em blue;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+	}
+	
+	 .prueba{
+	background:  rgb(184, 196, 224);
+	 border-radius: 5px;
+	  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+	  padding: 1%;
+	}
+	
+	.estilop{
+	font-size: 16pt;  
+    color: rgb(1, 31, 85);
+    border-radius: 10px;
+    padding: 5%;
+    text-shadow: 0.5px 0.5px 0.5px black , 0 0 2em black, 0 0 0.2em black;
+	}
+	
+	.parte1{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	}
+	
+	.parte2{
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+	top:20%;
+	
+	}
+	
+	.estiloT{
+	font-size: 14pt;  
+    color: rgb(184, 196, 224);
+    border-radius: 1px;
+    padding: 0.5%;
+    font-style:italic;
+    text-shadow: 1px 1px 1px gold, 0 0 4em black, 0 0 0.4em blue;
+	}
+	
+	.cabecera{
+	color:white;
+	font-size:19px;
+	 text-shadow: 1px 1px 1px gold, 0 0 4em black, 0 0 0.4em blue;
+	
+	}
+
+	.parte3{
+
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+		
+	font-size: 15pt;
+    background-color: rgb(184, 196, 224);
+    color: rgb(19, 31, 85);
+    border-radius: 5px;
+    padding: 0%;
+    text-shadow: 1px 1px 2px gold, 0 0 4em white, 0 0 0.4em blue;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    
+}
+
+H2{
+
+    font-size: 15pt;
+    background-color: rgb(19, 31, 85);
+    color: rgb(184, 196, 224);
+    border-radius: 10px;
+    padding: 1% 5% 1% 5%;
+    text-shadow: 1px 1px 2px gold, 0 0 4em white, 0 0 0.4em blue;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.titulo{
+display: flex;
+	justify-content: center;
+	align-items: center;	
+	top:20%;
+
+}

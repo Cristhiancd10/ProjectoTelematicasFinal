@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+				<title>Modulos</title>
+                <link href="estilos.css" rel="stylesheet" type="text/css" media="screen" />
+</h:head> 
+<body> 
+
+<h:form>
+	<div class="cont"><h:commandLink action="#{loginController.ingresar()}" value="Registrar Deducibles" class="ingresar" /><br></br></div>
+	<div class="cont1"><h:commandLink action="#{loginController.mostrar()}" value="Calculos Renta" class="ingresar" /><br></br></div>
+	<div class="cont2"><h:outputLink value="http://localhost:8080/Telematicas/GenerarXML?wsdl" class="ingresar"> Generar XML</h:outputLink></div>
+
+<h:commandButton class="btn3m" action="#{usuarioController.crear()}"
+					value="" />
+
+</h:form>
+</body> 
+</html>

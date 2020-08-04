@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<title>Usuarios</title>
+	<link href="estilos.css" rel="stylesheet" type="text/css"
+		media="screen" />
+	<f:metadata>
+		<f:viewParam name="cedula" value="#{usuarioController.cedula}" />
+		<f:viewAction action="#{usuarioController.cargarDatosUsuario()}" />
+	</f:metadata>
+
+</h:head>
+<body>
+	<div>
+		<h:form>
+			<div class="f">
+					<ui:define name="contenido"></ui:define>
+					<!--FORMULARIO -->
+					<div class="formulario">
+					<h:panelGrid columns="2">
+						
+							
+							<h:outputLabel class="etiqueta" value="Cedula:" />
+							<h:inputText class="form-control"
+								value="#{usuarioController.usuario.cedula}" id="txtCedula"
+								placeholder="Ej:0102546521" />
+							<h:message for="txtCedula" />
+							
+						
+						&nbsp;
+						
+							<h:outputLabel class="etiqueta" value="Nombre:" />
+							<h:inputText class="form-control"
+								value="#{usuarioController.usuario.nombre}" id="txtNombre" />
+							<h:message for="txtNombre" />
+							
+						
+						&nbsp;
+						
+							<h:outputLabel class="etiqueta" value="Apellido:" />
+							<h:inputText class="form-control"
+								value="#{usuarioController.usuario.apellido}" id="txtApellido" />
+							<h:message for="txtApellido" />
+						
+						&nbsp;
+						
+							<h:outputLabel class="etiqueta" value="Mail:" />
+							<h:inputText class="form-control"
+								value="#{usuarioController.usuario.mail}" id="txtMail" />
+							<h:message for="txtMail" />
+						
+						&nbsp;
+						
+							<h:outputLabel class="etiqueta" value="Contraseña:" />
+							<h:inputText class="form-control"
+								value="#{usuarioController.usuario.clave}" id="txtClave" />
+							<h:message for="txtClave" />
+						
+						&nbsp;
+							</h:panelGrid>
+					</div>
+
+			
+
+				<h:inputHidden value="#{usuarioController.editing}" />
+				<div class="form">
+					<h:commandButton class="btn1"
+						action="#{usuarioController.guardar()}" value="Registrar" />
+				</div>
+				<div class="form1">
+					<h:commandButton class="btn2"
+						action="#{usuarioController.listar()}" value="Listar"
+						immediate="true" />
+				</div>
+				<div class="form2">
+					<h:commandButton class="btn2" action="login" immediate="true"
+						value="Login" />
+				</div>
+
+			</div>
+
+<h:commandButton class="btn3m" action="login"
+					value="" />
+		</h:form>
+
+	</div>
+</body>
+</html>

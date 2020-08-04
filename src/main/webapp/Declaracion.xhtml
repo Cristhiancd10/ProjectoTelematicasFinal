@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+				<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+				<title>Declaracion</title>
+                <link href="estilos.css" rel="stylesheet" type="text/css" media="screen" />
+</h:head> 
+<body> 
+<h:form>
+	
+	<h:dataTable value="#{deducibleController.listadoDeclaracion}" var="dec" border="1" class="tables">
+		<h:column class="estiloT" headerClass="cabecera">
+			<f:facet name="header"  >Código</f:facet>
+			#{dec.codigo}
+		</h:column>
+		<h:column class="estiloT" headerClass="cabecera">
+			<f:facet name="header">Año</f:facet>
+			#{dec.anio}
+		</h:column>
+		<h:column class="estiloT" headerClass="cabecera">
+			<f:facet name="header">Fraccion Basica</f:facet>
+			#{dec.fraccionBasica}
+		</h:column>
+		<h:column class="estiloT" headerClass="cabecera">
+			<f:facet name="header">Exceso</f:facet>
+			#{dec.exceso}
+		</h:column>
+		<h:column class="estiloT" headerClass="cabecera">
+			<f:facet name="header">Impuestos FB</f:facet>
+			#{dec.impuestoFB}
+		</h:column>
+		<h:column class="estiloT" headerClass="cabecera">
+			<f:facet name="header" >Impuesto FE</f:facet>
+			#{dec.impuestoFE}
+		</h:column>
+
+	
+	</h:dataTable>
+<h:commandButton class="btn3r" action="#{usuarioController.crear()}"
+					value="" />
+
+</h:form>
+</body> 
+</html>

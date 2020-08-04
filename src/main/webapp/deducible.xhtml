@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<title>Deducible</title>
+	<link href="estilos.css" rel="stylesheet" type="text/css"
+		media="screen" />
+
+	<f:metadata>
+		<f:viewParam name="id" value="#{facturaController.id}"></f:viewParam>
+		<f:viewAction action="#{facturaController.loadData()}" />
+	</f:metadata>
+
+</h:head>
+<body>
+	<h:form>
+	
+		<div class="parte1">
+		<h:panelGrid columns="3" class="prueba">
+			<h:outputLabel value="Proveedor" var="" class="estilop" />
+			<h:inputText value="#{facturaController.ruc}" />
+			<h:commandButton action="#{facturaController.buscarProveedor()}"
+				value="Buscar Proveedor"  class="btns"/>
+		
+
+		</h:panelGrid>
+</div>
+&nbsp;
+<div class="parte2">
+		<h:panelGrid columns="3" class="prueba">
+
+			<h:outputText value="Valor:" class="estilop" />
+			<h:inputText value="#{facturaController.factura.valor}" id="txtValor" />
+			<h:message for="txtValor" />
+
+			<h:outputLabel value="Deducibles:" class="estilop" />
+			<h:dataTable value="#{facturaController.factura.deducibles}"
+				var="ded">
+				<h:column>
+					<f:facet name="header">Descripcion</f:facet>
+					<h:inputText value="#{ded.descripcion}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header" class="estilol">Cantidad</f:facet>
+					<h:inputText value="#{ded.cantidad}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header" class="estilol">Vivienda</f:facet>
+					<h:inputText value="#{ded.valorDeducibleVivienda}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header" class="estilol">Educacion</f:facet>
+					<h:inputText value="#{ded.valorDeducibleEducacion}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header" class="estilol">Salud</f:facet>
+					<h:inputText value="#{ded.valorDeducibleSalud}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header" class="estilol">Vestimenta</f:facet>
+					<h:inputText value="#{ded.valorDeducibleVestimenta}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header" class="estilol">Alimentacion</f:facet>
+					<h:inputText value="#{ded.valorDeducibleAlimentacion}" />
+				</h:column>
+
+			</h:dataTable>
+			<h:commandButton action="#{facturaController.addDeducible()}"
+				value="+ deducibles" />
+
+			<h:commandButton action="#{facturaController.cargarDatos()}"
+				value="Guardar" class="btnsG"/>
+
+
+		</h:panelGrid>
+
+
+</div>
+
+<h:commandButton class="btn3m" action="Modulos"
+					value="" />
+	</h:form>
+</body>
+</html>

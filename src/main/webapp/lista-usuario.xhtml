@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+
+				<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+				<title>Lista Usuarios</title>
+                <link href="estilos.css" rel="stylesheet" type="text/css" media="screen" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</h:head> 
+<body> 
+
+				<h:form>
+				<!--  TABLA -->
+				<h:dataTable var="_usuario" value="#{usuarioController.usuarios}"
+					styleClass="table" class="tables">
+					<h:column>
+						<f:facet name="header">
+							<a id="cabeceratabla" class="estiloC" >Cedula</a>
+						</f:facet>
+						<a id="cabeceratabla" class="estilol"> #{_usuario.cedula}</a>
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<a id="cabeceratabla" class="estiloC">Nombre</a>
+						</f:facet>
+						<a id="cabeceratabla" class="estilol"> #{_usuario.nombre}</a>
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<a id="cabeceratabla" class="estiloC">Apellido</a>
+						</f:facet>
+						<a id="cabeceratabla" class="estilol"> #{_usuario.apellido}</a>
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<a id="cabeceratabla" class="estiloC">Mail</a>
+						</f:facet>
+						<a id="cabeceratabla" class="estilol" >#{_usuario.mail}</a>
+					</h:column>
+					
+
+
+					<h:column>
+						<f:facet name="header">
+							<a id="cabeceratabla" class="estiloC">Acciones</a>
+						</f:facet>
+						<h:commandButton class="btns"
+							action="#{usuarioController.editar(_usuario)}" value="Editar" />
+							&nbsp;
+						<h:commandButton class="btns"
+							action="#{usuarioController.eliminar(_usuario)}" value="Eliminar" />
+					</h:column>
+				</h:dataTable>
+				<br />
+				<h:commandButton class="btn3r" action="login"
+					value="" />
+			</h:form>
+</body> 
+</html>

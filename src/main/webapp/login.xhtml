@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<head>
+				<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+				<title>Inicio Sesión</title>
+                <link href="estiloIndex.css" rel="stylesheet" type="text/css" media="screen" />
+</head> 
+<body> 
+
+
+<div class="titulo">
+	<h1>Declaración de Impuestos</h1>
+	</div>
+<div class="general">
+					<h:form>
+					
+					
+					
+						<h:messages globalOnly="true" />
+						<h:outputLabel class="etiqueta" value="Usuario:" />
+						<div class="input-group form-group">
+
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+							<h:inputText type="email" class="l"
+								value="#{loginController.user.mail}" id="txtUser" />
+							<h:message for="txtUser" />
+
+						</div>
+						<h:outputLabel class="etiqueta" value="Clave:" />
+						<div class="input-group form-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+							<h:inputSecret type="password" class="l"
+								value="#{loginController.user.clave}" id="txtClave"   />
+							<h:message for="txtClave" />
+						</div>
+						<div class="form-group">
+							<h:commandButton value="Login" class="r" id="login"
+								action="#{loginController.login()}" />
+						</div>
+						<div class="form-group">
+							<h:commandButton value="Registrarse" class="r" id="registro"
+								action="#{loginController.registrar()}" />
+						</div>
+					</h:form>
+				</div>
+</body> 
+</html>
